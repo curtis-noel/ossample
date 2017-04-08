@@ -1,0 +1,14 @@
+version: '2'
+services:
+    ossample-app:
+        image: ossample
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://ossample-postgresql:5432/ossample
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    ossample-postgresql:
+        extends:
+            file: postgresql.yml
+            service: ossample-postgresql
