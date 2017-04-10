@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "employee",
+            "otherEntityName": "employee",
+            "otherEntityRelationshipName": "department"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "departmentName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170410174817",
+    "entityTableName": "department",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
