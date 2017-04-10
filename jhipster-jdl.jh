@@ -1,0 +1,21 @@
+entity Department {
+	departmentName String required
+}
+
+/**
+ * The Employee entity.
+ */
+entity Employee {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate ZonedDateTime,
+	salary Long,
+	commissionPct Long
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Department{employee} to	Employee
+}
